@@ -1,4 +1,4 @@
-# Dynamic Valuation Model 📊
+# Dynamic Valuation Model 
 
 A professional-grade equity valuation app built in Python + Streamlit.
 Enter any publicly traded ticker and get a full institutional-quality valuation in seconds.
