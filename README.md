@@ -1,6 +1,5 @@
 # Dynamic Valuation Model 
 
-A professional-grade equity valuation app built in Python + Streamlit.
 Enter any publicly traded ticker and get a full institutional-quality valuation in seconds.
 
 ---
@@ -27,24 +26,6 @@ Enter any publicly traded ticker and get a full institutional-quality valuation 
 - **Yahoo Finance** (`yfinance`) — price, financials, key statistics
 - **FRED** — 10-year US Treasury rate (live, auto-refreshed)
 
----
-
-## Setup
-
-### 1. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Run the app
-```bash
-streamlit run app.py
-```
-
-The app opens at `http://localhost:8501` in your browser.
-
----
-
 ## Usage
 
 1. Enter any ticker (e.g. `AAPL`, `NVDA`, `JPM`, `NEE`, `AMZN`) in the sidebar
@@ -66,47 +47,7 @@ The app opens at `http://localhost:8501` in your browser.
 | Simulations | Monte Carlo path count (1K–25K) |
 | Custom Comp Tickers | Override auto-sector comps with your own list |
 
----
-
-## Running in Google Colab
-
-```python
-# Install
-!pip install streamlit yfinance plotly scipy -q
-
-# Tunnel setup
-!pip install pyngrok -q
-from pyngrok import ngrok
-
-# Run
-import subprocess, threading
-def run():
-    subprocess.run(["streamlit", "run", "app.py", "--server.port", "8501"])
-t = threading.Thread(target=run); t.daemon = True; t.start()
-
-public_url = ngrok.connect(8501)
-print(f"Open: {public_url}")
-```
-
----
-
-## Quant Concepts Implemented
-
-| Concept | Where Used |
-|---|---|
-| Discounted Cash Flow (DCF) | Tab 1 — all three models |
-| CAPM (Capital Asset Pricing Model) | WACC → cost of equity |
-| Geometric Brownian Motion | Monte Carlo FCF path simulation |
-| Gordon Growth Model | Terminal value + DDM |
-| Comparable Multiples | EV/EBITDA, EV/Revenue, P/E comps |
-| Football Field Analysis | Tab 4 — range bar chart |
-| Sensitivity Analysis | Tab 5 — 2D heatmap + terminal growth chart |
-| Probability of Upside | Monte Carlo: % paths above current price |
-| Mean Reversion (3-Stage) | Fade from high growth to terminal rate |
-
----
-
-## Notes
+***Notes
 
 - FCF is sourced directly from the cash flow statement. If unavailable, 50% EBITDA is used as a proxy (flagged in the UI).
 - WACC is computed via CAPM with a 5.5% equity risk premium. Override via sidebar if you have a custom cost of capital.
