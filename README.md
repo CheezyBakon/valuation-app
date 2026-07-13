@@ -1,6 +1,6 @@
 # Dynamic Valuation Model 
 
-Enter any publicly traded ticker and get a full institutional-quality valuation in seconds.
+Enter any publicly traded ticker and get a full valuation in seconds.
 
 ---
 
