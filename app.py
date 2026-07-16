@@ -1800,10 +1800,10 @@ with tab7:
     if show_raw:
         if st.toggle("Show Raw Sensitivity Table", value=False, key="toggle_raw"):
             if True:
-            raw_df = sens.copy()
-            raw_df.columns = [f"WACC {v*100:.1f}%" for v in raw_df.columns]
-            raw_df.index   = [f"Growth {v*100:.1f}%" for v in raw_df.index]
-            st.dataframe(raw_df.style.format("${:.2f}"), use_container_width=True)
+                raw_df = sens.copy()
+                raw_df.columns = [f"WACC {v*100:.1f}%" for v in raw_df.columns]
+                raw_df.index   = [f"Growth {v*100:.1f}%" for v in raw_df.index]
+                st.dataframe(raw_df.style.format("${:.2f}"), use_container_width=True)
 
 
 # ═══════════════════════════════════════════════════════════════
