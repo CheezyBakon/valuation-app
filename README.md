@@ -28,7 +28,7 @@ Enter any publicly traded ticker and get a full valuation in seconds.
 
 ## Usage
 
-1. Enter any ticker (e.g. `AAPL`, `NVDA`, `JPM`, `NEE`, `AMZN`) in the sidebar
+1. Enter any ticker in the sidebar
 2. Select DCF model: 2-Stage / 3-Stage / Monte Carlo / All Three
 3. Adjust growth, WACC, and terminal growth assumptions
 4. Click **Run Valuation**
