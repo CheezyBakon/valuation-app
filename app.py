@@ -734,9 +734,9 @@ with st.sidebar:
             bull_wacc_adj = st.number_input("Bull WACC Adj (pp)", value=-0.5, step=0.1, format="%.1f", key="bull_wacc")
     if st.toggle("Bear Case", value=False, key="toggle_bear"):
         if True:
-        bear_g1 = st.number_input("Bear Growth Yr 1 (%)", value=max(g1_pct-5,0), step=0.5, format="%.1f", key="bear_g1")
-        bear_tg = st.number_input("Bear Terminal Growth (%)", value=max(tg_pct-0.5,0.5), step=0.1, format="%.1f", key="bear_tg")
-        bear_wacc_adj = st.number_input("Bear WACC Adj (pp)", value=1.0, step=0.1, format="%.1f", key="bear_wacc")
+            bear_g1 = st.number_input("Bear Growth Yr 1 (%)", value=max(g1_pct-5,0), step=0.5, format="%.1f", key="bear_g1")
+            bear_tg = st.number_input("Bear Terminal Growth (%)", value=max(tg_pct-0.5,0.5), step=0.1, format="%.1f", key="bear_tg")
+            bear_wacc_adj = st.number_input("Bear WACC Adj (pp)", value=1.0, step=0.1, format="%.1f", key="bear_wacc")
 
     # Monte Carlo — always defined
     mc_g_std = 0.05; mc_wacc_std = 0.015; n_sims = 10000
