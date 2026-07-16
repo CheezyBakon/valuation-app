@@ -1108,11 +1108,11 @@ with tab1:
 
     if st.expander("Show WACC Decomposition", value=False):
         if True:
-        wd = pd.DataFrame({
-            "Component":    ["Cost of Equity","After-tax Cost of Debt","Blended WACC"],
-            "Rate":         [fmt_pct(cost_eq), fmt_pct(cost_dbt*(1-tax_rate)), fmt_pct(wacc)],
-            "Weight":       [fmt_pct(e_wt), fmt_pct(d_wt), "100%"],
-            "Contribution": [fmt_pct(cost_eq*e_wt), fmt_pct(cost_dbt*(1-tax_rate)*d_wt), fmt_pct(wacc)],
+            wd = pd.DataFrame({
+                "Component":    ["Cost of Equity","After-tax Cost of Debt","Blended WACC"],
+                "Rate":         [fmt_pct(cost_eq), fmt_pct(cost_dbt*(1-tax_rate)), fmt_pct(wacc)],
+                "Weight":       [fmt_pct(e_wt), fmt_pct(d_wt), "100%"],
+                "Contribution": [fmt_pct(cost_eq*e_wt), fmt_pct(cost_dbt*(1-tax_rate)*d_wt), fmt_pct(wacc)],
         })
         st.dataframe(wd, hide_index=True, use_container_width=True)
         st.caption(
