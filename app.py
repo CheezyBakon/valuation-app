@@ -729,9 +729,9 @@ with st.sidebar:
     st.markdown("### Bull / Bear Scenarios")
     if st.toggle("Bull Case", value=False, key="toggle_bull"):
         if True:
-        bull_g1 = st.number_input("Bull Growth Yr 1 (%)", value=g1_pct+5, step=0.5, format="%.1f", key="bull_g1")
-        bull_tg = st.number_input("Bull Terminal Growth (%)", value=tg_pct+0.5, step=0.1, format="%.1f", key="bull_tg")
-        bull_wacc_adj = st.number_input("Bull WACC Adj (pp)", value=-0.5, step=0.1, format="%.1f", key="bull_wacc")
+            bull_g1 = st.number_input("Bull Growth Yr 1 (%)", value=g1_pct+5, step=0.5, format="%.1f", key="bull_g1")
+            bull_tg = st.number_input("Bull Terminal Growth (%)", value=tg_pct+0.5, step=0.1, format="%.1f", key="bull_tg")
+            bull_wacc_adj = st.number_input("Bull WACC Adj (pp)", value=-0.5, step=0.1, format="%.1f", key="bull_wacc")
     if st.toggle("Bear Case", value=False, key="toggle_bear"):
         if True:
         bear_g1 = st.number_input("Bear Growth Yr 1 (%)", value=max(g1_pct-5,0), step=0.5, format="%.1f", key="bear_g1")
