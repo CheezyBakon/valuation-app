@@ -678,7 +678,7 @@ st.markdown('<p class="sub-header">DCF · Comps · DDM · Reverse DCF · Scenari
 with st.sidebar:
     st.markdown("### Company")
     ticker  = st.text_input("Ticker Symbol", value="AAPL", placeholder="e.g. MSFT, NVDA, JPM").upper().strip()
-    run_btn = st.button("Run Valuation", type="primary", use_container_width=True)
+    run_btn = st.button("Run Valuation", type="primary", use_container_width=True, icon=None)
 
     st.divider()
     st.markdown("### DCF Model")
@@ -1785,7 +1785,8 @@ with tab7:
     st.plotly_chart(fig_mg, use_container_width=True)
 
     if show_raw:
-        with st.expander("Raw Sensitivity Table"):
+        if st.expander("Show Raw Sensitivity Table", value=False):
+            if True:
             raw_df = sens.copy()
             raw_df.columns = [f"WACC {v*100:.1f}%" for v in raw_df.columns]
             raw_df.index   = [f"Growth {v*100:.1f}%" for v in raw_df.index]
